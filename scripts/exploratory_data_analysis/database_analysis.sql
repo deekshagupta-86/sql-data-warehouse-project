@@ -21,15 +21,3 @@ FROM INFORMATION_SCHEMA.TABLES;
 SELECT *
 FROM INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = 'dim_customers';
-
--- Analysing the dimensions of different tables
-SELECT 
-DISTINCT country 
-FROM gold.dim_customer;
-SELECT
-DISTINCT country 
-FROM gold.dim_customer;
-SELECT
-DISTINCT category, subcategory , product_name 
-FROM gold.dim_products
-ORDER BY 1,2,3;
